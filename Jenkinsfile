@@ -15,6 +15,7 @@ pipeline{
                 bat 'mvn -Dtest=apiTest01 test'
             }
         }
+        }
 
         post{
                     always{
