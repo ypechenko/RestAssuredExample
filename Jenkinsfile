@@ -20,7 +20,7 @@ pipeline{
                     steps{
                         bat 'mvn site -DgenerateReports=false'
                         bat 'mvn surefire-report:report'
-                        junit '**/target/site/surefire-reports/*.xml'
+                        junit '**/target/site/surefire-reports/*.html'
 
 
                     }
