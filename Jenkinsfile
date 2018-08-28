@@ -20,7 +20,9 @@ pipeline{
                     steps{
                         bat 'mvn site -DgenerateReports=false'
                         bat 'mvn surefire-report:report'
-                        junit '**/target/site/*.html'
+                        publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true,
+                        reportDir: 'target/site', reportFiles: 'surefire-report.html', reportName: 'Api Test Report', reportTitles: ''])
+
 
 
                     }
