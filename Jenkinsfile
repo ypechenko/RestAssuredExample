@@ -17,7 +17,7 @@ pipeline{
         }
         }
 
-       /* post{
+       post{
                     always{
                         bat 'mvn site -DgenerateReports=false'
                         bat 'mvn surefire-report:report'
@@ -27,8 +27,8 @@ pipeline{
 
 
                     }
-                } */
+                }
 
 
-    }
+
  }
