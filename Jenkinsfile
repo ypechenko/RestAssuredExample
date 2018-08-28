@@ -16,7 +16,7 @@ pipeline{
             }
         }
 
-        post('Report'){
+        post{
                     always{
                         bat 'mvn site -DgenerateReports=false'
                         bat 'mvn surefire-report:report'
