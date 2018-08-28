@@ -16,8 +16,8 @@ pipeline{
             }
         }
 
-        stage('Report'){
-                    steps{
+        post('Report'){
+                    always{
                         bat 'mvn site -DgenerateReports=false'
                         bat 'mvn surefire-report:report'
                         publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true,
