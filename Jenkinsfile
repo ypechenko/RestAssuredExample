@@ -13,9 +13,6 @@ pipeline{
         stage('Test'){
             steps{
                 bat 'mvn -Dtest=apiTest01 test'
-                //bat 'testrunner -s WeatherSuite c:/AutomationProjects/Temp/RESTWeather.xml'
-                bat 'testrunner -s WeatherSuite RESTWeather.xml'
-
             }
         }
 
